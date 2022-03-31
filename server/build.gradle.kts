@@ -11,7 +11,7 @@ plugins {
 group = "com/magnomp/lecuisine.github"
 version = "0.0.1"
 application {
-    mainClass.set("com/magnomp/lecuisine.github.ApplicationKt")
+    mainClass.set("lecuisine.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
