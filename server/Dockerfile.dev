@@ -1,0 +1,4 @@
+# App Building phase --------
+FROM gradle:7.4.0-jdk8 AS build
+
+WORKDIR /src

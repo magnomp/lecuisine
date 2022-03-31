@@ -1,0 +1,4 @@
+volumes/
+.gradle/
+.idea/
+build/
