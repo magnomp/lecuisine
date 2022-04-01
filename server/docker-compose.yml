@@ -5,7 +5,7 @@ services:
       - .:/src/
       - ./volumes/gradle-cache:/home/gradle/.gradle
       - /src/.gradle
-      - /src/build
+      - ./build:/src/build
     build:
       context: .
       dockerfile: Dockerfile.dev
