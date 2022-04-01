@@ -1,11 +1,13 @@
 val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
+val dagger_version: String by project
 
 plugins {
     application
     kotlin("jvm") version "1.6.10"
-                id("org.jetbrains.kotlin.plugin.serialization") version "1.6.10"
+    kotlin("kapt") version "1.6.10"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.6.10"
 }
 
 group = "com/magnomp/lecuisine.github"
@@ -23,6 +25,8 @@ repositories {
 }
 
 dependencies {
+    implementation("com.google.dagger:dagger:$dagger_version")
+    kapt("com.google.dagger:dagger-compiler:$dagger_version")
     implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
     implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor_version")
